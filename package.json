@@ -1,0 +1,83 @@
+{
+  "name": "n8n-nodes-cardano",
+  "version": "1.0.0",
+  "description": "A comprehensive n8n community node for Cardano blockchain providing 13 resources and 100+ operations for accounts, transactions, native tokens, NFTs, staking, smart contracts, and governance.",
+  "license": "BUSL-1.1",
+  "author": {
+    "name": "Velocity BPA",
+    "email": "licensing@velobpa.com",
+    "url": "https://velobpa.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Velocity-BPA/n8n-nodes-cardano.git"
+  },
+  "homepage": "https://github.com/Velocity-BPA/n8n-nodes-cardano",
+  "keywords": [
+    "n8n",
+    "n8n-community-node-package",
+    "cardano",
+    "blockchain",
+    "ada",
+    "web3",
+    "defi",
+    "nft",
+    "plutus",
+    "smart-contracts",
+    "staking",
+    "governance",
+    "voltaire"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write .",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/CardanoNetworkApi.credentials.js",
+      "dist/credentials/CardanoWalletApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Cardano/Cardano.node.js",
+      "dist/nodes/CardanoTrigger/CardanoTrigger.node.js"
+    ]
+  },
+  "dependencies": {
+    "@blockfrost/blockfrost-js": "^5.5.0",
+    "bech32": "^2.0.0",
+    "bip39": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.1",
+    "gulp": "^4.0.2",
+    "jest": "^29.7.0",
+    "n8n-workflow": "^1.22.0",
+    "prettier": "^3.1.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.2"
+  },
+  "peerDependencies": {
+    "n8n-workflow": ">=1.0.0"
+  }
+}
