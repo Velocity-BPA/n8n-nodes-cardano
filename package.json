@@ -2,7 +2,7 @@
   "name": "n8n-nodes-cardano",
   "version": "1.0.0",
   "description": "A comprehensive n8n community node for Cardano blockchain providing 13 resources and 100+ operations for accounts, transactions, native tokens, NFTs, staking, smart contracts, and governance.",
-  "license": "BUSL-1.1",
+  "license": "SEE LICENSE IN LICENSE.md",
   "author": {
     "name": "Velocity BPA",
     "email": "licensing@velobpa.com",
